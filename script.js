@@ -2,16 +2,17 @@ const url = "https://ghibliapi.vercel.app/films/";
 const container = document.getElementById('container');
 
 async function getJson () {
-
-try{
-  const response = await fetch(url);
-  const json = await response.json();
-  showData(json);
-}
-catch (error){
-	console.error('Upsss... ' + error)
-}
-}
+	try{
+	  const response = await fetch(url, 
+	  	/*Agregué esto porque ocurria un error en github page*/
+	  	{'mode': 'cors', 'headers': { 'Access-Control-Allow-Origin': '*'}
+	  });
+	  const json = await response.json();
+	  showData(json);
+	}
+	catch (error){
+		console.error('Upsss... ' + error)
+	}}
 getJson()
 
 function showData(data){
