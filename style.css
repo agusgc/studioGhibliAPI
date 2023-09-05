@@ -1,0 +1,16 @@
+body{
+	background: url(img/ghibliBg.gif) fixed;
+	background-repeat: none;
+}
+
+header{
+	background-color: #1097e3;
+}
+
+header img{
+	max-height: 100px; 
+}
+
+.card img{
+	max-height: 400px;
+}
