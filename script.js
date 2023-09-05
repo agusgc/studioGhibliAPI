@@ -3,11 +3,7 @@ const container = document.getElementById('container');
 
 async function getJson () {
 	try{
-	  const response = await fetch(url, {
-        method : "GET",
-        mode: 'cors',
-        header: 'Access-Control-Allow-Origin: https://ghibliapi.vercel.app/films/'
-    })
+	  const response = await fetch(url)
 	  const json = await response.json();
 	  showData(json);
 	}
